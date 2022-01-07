@@ -4,6 +4,20 @@ var obj = {
 
 function getSquaredElementsAtProperty(obj, key) {
     // your code here
+
+    var output = [];
+
+    if(!Array.isArray(obj[key]))
+      return output;
+
+    obj[key].forEach(element => {
+
+      output.push(Math.pow(element, 2));
+      
+    });
+
+    return output;
+
 }
 
 var output = getSquaredElementsAtProperty(obj, 'key');

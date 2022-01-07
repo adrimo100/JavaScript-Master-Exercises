@@ -1,5 +1,11 @@
 function addToBackOfNew(arr, element) {
     // Write your function here
+    let output = arr.slice();
+
+    output.push(element);
+
+    return output;
+
 }
 
 var input = [1, 2];

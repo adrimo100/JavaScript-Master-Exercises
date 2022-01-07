@@ -3,6 +3,13 @@ var obj = {
 };
 function getAllButLastElementOfProperty(obj, key) {
     // your code here
+
+    var output = [];
+
+    if(Array.isArray(obj[key]))
+      output = obj[key].slice(0, obj[key].length - 1);
+
+    return output;
 }
 
 var output = getAllButLastElementOfProperty(obj, 'key');

@@ -1,5 +1,7 @@
 function repeatString(string, num) {
-    // your code here
+    // your code 
+    
+    return string.repeat(num);
 }
 
 var output = repeatString('code', 3);

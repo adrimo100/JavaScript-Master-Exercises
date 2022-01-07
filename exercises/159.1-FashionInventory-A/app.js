@@ -19,7 +19,7 @@ var currentInventory = [
 
 function renderInventory(inventory) {
 
-    //      for (let i = 0; i < inventory.length; i++) {
+    /*//      for (let i = 0; i < inventory.length; i++) {
     //     for (let j = 0; j < inventory[i].shoes.length; j++) {
     //       return `${inventory[i].name}, ${inventory[i].shoes[j].name}, ${inventory[i].shoes[j].price}`;
     //     }
@@ -36,7 +36,32 @@ function renderInventory(inventory) {
     // const render = inventory.map(arr => {
     //     return [arr.name, mapShoes]
     // })
-    return mapShoes
+    return mapShoes*/
+
+    var output = [], aux = [];
+
+    for(var i = 0; i < inventory.length; i++){
+
+        
+
+        inventory[i].shoes.forEach(element2 => {
+
+            aux.push(inventory[i]["name"])
+
+            aux.push(element2.name);
+
+            aux.push(element2.price);
+
+
+            output.push(aux);
+
+            aux = [];
+
+        });  
+
+    };
+    
+    return output;
 
 }
 console.log(renderInventory(currentInventory))
